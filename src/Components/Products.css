@@ -1,0 +1,118 @@
+.latest-product-1 {
+    text-align: center;
+    width: 88%;
+    margin: 0px 79px;
+    position: relative;
+    bottom: 65px;
+  }
+  .latest-product-1 hr {
+    position: relative;
+    top: -41px;
+    opacity: 0.7;
+  }
+  .latest-product-1 p {
+    font-size: 50px;
+    font-weight: 300;
+  }
+  
+  /* latest product styles */
+  .container {
+    position: relative;
+    bottom: 70px;
+  }
+  .filters {
+    text-align: center;
+    padding: 10px;
+  }
+  .filters button:hover{
+    cursor: pointer;
+    color: #f2f2f2;
+    background-color: black;
+  }
+  .filters button {
+    border: none;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(247, 246, 246);
+    margin: 0 6px;
+    font-size: 16px;
+    padding: 7px 10px;
+    border-radius: 5px;
+    color: #2c2c2c;
+  }
+  .products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 40px 65px;
+  }
+  .product-card img {
+    width: 250px;
+    height: 250px;
+  }
+  .product-card {
+    display: flex;
+    border: 1px solid rgb(181, 181, 181);
+    border-radius: 5px;
+    margin: 16px;
+    padding: 25px 0 0 0;
+    align-items: center;
+    flex-direction: column;
+  }
+  .product-card .card-divider {
+    border: none;
+    border-top: 1px solid #bbbaba;
+    margin: 8px 0; /* space above & below the line */
+    width: 100%; /* shorten the line if you like */
+    opacity: 0.6; /* a subtle, light divider */
+    position: relative;
+    bottom: 30px;
+  }
+  .product-card .actions {
+    position: relative;
+    bottom: 20px;
+  }
+  .product-card .details {
+    border: none;
+    background-color: rgb(45, 45, 45);
+    color: rgb(226, 226, 226);
+    font-size: 15px;
+    font-weight: 200;
+    border-radius: 5px;
+    padding: 8px 13px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .product-card .add-to-cart {
+    border: none;
+    background-color: rgb(45, 45, 45);
+    color: rgb(226, 226, 226);
+    font-size: 15px;
+    font-weight: 200;
+    border-radius: 5px;
+    padding: 8px 13px;
+    cursor: pointer;
+  }
+  .product-card .description {
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 48px;
+    text-align: center;
+    padding: 0 25px;
+    position: relative;
+    bottom: 30px;
+    opacity: 0.66;
+  }
+  .product-card .title {
+    color: rgb(21, 21, 21);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 250px;
+    padding: 0 25px;
+  }
+  .product-card .price {
+    position: relative;
+    bottom: 30px;
+    font-size: 18px;
+  }

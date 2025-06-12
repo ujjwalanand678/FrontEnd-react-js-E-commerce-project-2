@@ -1,0 +1,28 @@
+.main{
+    position: relative;
+    top: -15px;
+  }
+  .main figure img {
+    position: relative;
+    left: -13px;
+    width: 102%;
+    border-radius: 5px;
+  }
+  .heading-1 {
+    position: relative;
+    z-index: 1;
+    color: aliceblue;
+    bottom: 275px;
+    padding: 0 125px;
+    font-size: 40px;
+    font-weight: 300;
+  }
+  .heading-2 {
+    position: relative;
+    z-index: 1;
+    color: aliceblue;
+    bottom: 270px;
+    padding: 0 125px;
+    font-size: 20px;
+    font-weight: 400;
+  }
