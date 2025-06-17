@@ -19,11 +19,11 @@ const Products = () => {
 
       <section className="container">
         <div className="filters">
-          <button className="all" onClick={handleAll}>All</button>
-          <button className="men-clothing" onClick={handleMen}>Men's Clothing</button>
-          <button className="women-clothing" onClick={handleWomen}>Women's Clothing</button>
-          <button className="jewelery" onClick={handleJewel}>Jewelery</button>
-          <button className="electronics" onClick={handleElectronics}>Electronics</button>
+          <button className="all">All</button>
+          <button className="men-clothing">Men's Clothing</button>
+          <button className="women-clothing">Women's Clothing</button>
+          <button className="jewelery">Jewelery</button>
+          <button className="electronics">Electronics</button>
         </div>
         <div className="products">
           {userData.map((user) => (
