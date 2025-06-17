@@ -1,19 +1,20 @@
 import React from "react";
 import "./Banner.css";
-
+import Footer from "./Footer"
 const Banner = () => {
   return (
     <>
-      <main class="main">
+      <main className="main">
         <figure>
           <img src="./images/main.png.jpg" alt="New Season Arrivals" />
-          <figcaption class="heading-1">New Season Arrivals</figcaption>
-          <figcaption class="heading-2">
+          <figcaption className="heading-1">New Season Arrivals</figcaption>
+          <figcaption className="heading-2">
             This is a wider card with supporting text below as a natural lead-in
             to additional content. This content is a bit longer.
           </figcaption>
         </figure>
       </main>
+      
     </>
   );
 };
