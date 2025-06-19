@@ -6,7 +6,7 @@ const Banner = () => {
     <>
       <main className="main">
         <figure>
-          <img src="./images/main.png.jpg" alt="New Season Arrivals" />
+          <img src="./assets/main.png" alt="New Season Arrivals" />
           <figcaption className="heading-1">New Season Arrivals</figcaption>
           <figcaption className="heading-2">
             This is a wider card with supporting text below as a natural lead-in

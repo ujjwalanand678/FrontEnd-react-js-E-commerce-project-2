@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Products.css";
+import { Link } from "react-router-dom";
 const Products = () => {
   const [userData, setUserData] = useState([]);
   const getData = async () => {
@@ -26,20 +27,26 @@ const Products = () => {
           <button className="electronics">Electronics</button>
         </div>
         <div className="products">
-          {userData.map((user) => (
-            <div className="product-card" key={user.id}>
-              <img src={user.image} alt={user.title} />
-              <h4 className="title">{user.title}</h4>
-              <p className="description">{user.description}</p>
-              <hr className="card-divider" />
-              <p className="price">${user.price.toFixed(2)}</p>
-              <hr className="card-divider" />
-              <div className="actions">
-                <button className="details">Details</button>
-                <button className="add-to-cart">Add to cart</button>
+          {userData.length <= 0 ? (
+            <h2 className="text-center">Loading...!</h2>
+          ) : (
+            userData.map((user) => (
+              <div className="product-card" key={user.id}>
+                <img src={user.image} alt={user.title} />
+                <h4 className="title">{user.title}</h4>
+                <p className="description">{user.description}</p>
+                <hr className="card-divider" />
+                <p className="price">${user.price.toFixed(2)}</p>
+                <hr className="card-divider" />
+                <div className="actions">
+                  <Link to={`product/${user.id}`}>
+                    <button className="details">Details</button>
+                  </Link>
+                  <button className="add-to-cart">Add to cart</button>
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          )}
         </div>
       </section>
     </>

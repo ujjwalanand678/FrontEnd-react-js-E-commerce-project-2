@@ -7,13 +7,15 @@ import Login from "../Components/Login";
 import Register from "../Components/Register";
 import Cart from "../Components/Cart";
 import Home from "../Components/Home";
+import ProductDetail from "../Components/ProductDetail";
 
 
 const Routing = () => {
   return (
     <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/product" element={<LatestProduct/>}/>
+        <Route path="/product/:id" element={<ProductDetail/>}/>
+        <Route path="/latest-products" element={<LatestProduct/>}/>
         <Route path="/about" element={<About />}/>
         <Route path="/contact" element={<Contact />}/>
         <Route path="/login" element={<Login />}/>
