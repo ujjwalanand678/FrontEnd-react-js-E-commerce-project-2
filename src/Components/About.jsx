@@ -2,7 +2,7 @@ import React from "react";
 import "./About.css"
 import Footer from "./Footer";
 import cloths from "../assets/cloths.jpeg"
-import jewels from "../assets/jewels.webp"
+import jewels from "../assets/jewels.jpeg"
 import laptop from "../assets/laptop.jpeg"
 import shoes from "../assets/shoes.jpeg"
 
