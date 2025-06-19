@@ -1,7 +1,7 @@
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import Routing from "./Routes/Routing";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/dist/react"
 
 function App() {
   return (
