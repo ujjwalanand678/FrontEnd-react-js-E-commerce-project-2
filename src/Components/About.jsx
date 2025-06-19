@@ -1,6 +1,11 @@
 import React from "react";
 import "./About.css"
 import Footer from "./Footer";
+import cloths from "../assets/cloths.jpeg"
+import jewels from "../assets/jewels.webp"
+import laptop from "../assets/laptop.jpeg"
+import shoes from "../assets/shoes.jpeg"
+
 const About = () => {
   return (<>
    <div className="about-us">
@@ -15,20 +20,20 @@ const About = () => {
             <h2>Our Products</h2>
             <div className="our-product">
             <div className="our-product-card">
-                <img src="./images/pexels-photo-298863.jpeg" alt=""/>
+                <img src={shoes} alt=""/>
                 <strong>Men's Clothing</strong>
             </div>
             
             <div className="our-product-card">
-                <img src="./images/pexels-photo-7679720.jpeg" alt=""/>
+                <img src={cloths} alt=""/>                                  
                 <strong>Women's Clothing</strong>
             </div>
             <div className="our-product-card">
-                <img src="./images/pexels-photo-1927259.webp" alt=""/>
+                <img src={jewels} alt=""/>      
                 <strong>Jewelery</strong>
             </div>
             <div className="our-product-card">
-                <img src="./images/pexels-photo-356056.jpeg" alt=""/>
+                <img src={laptop} alt=""/>
                 <strong>Electronics</strong>
             </div> 
             </div>

@@ -1,12 +1,14 @@
 import React from "react";
 import "./Banner.css";
-import Footer from "./Footer"
+import mainImg from "../assets/main.jpg";
 const Banner = () => {
   return (
     <>
       <main className="main">
         <figure>
-          <img src="./assets/main.png" alt="New Season Arrivals" />
+          <img src={mainImg} alt="New Season Arrivals" />
+          {/* <img src="/assets/main.jpg" alt="New Season Arrivals" /> */}
+
           <figcaption className="heading-1">New Season Arrivals</figcaption>
           <figcaption className="heading-2">
             This is a wider card with supporting text below as a natural lead-in
@@ -14,7 +16,6 @@ const Banner = () => {
           </figcaption>
         </figure>
       </main>
-      
     </>
   );
 };
