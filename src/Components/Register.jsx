@@ -9,13 +9,13 @@ const Register = () => {
    
     <div className="contact-us">
         <form action="" className="contact-us-1">
-            <label for="name">Full Name</label>
+            <label htmlFor="name">Full Name</label>
             <input type="text" id="name" name="name" placeholder="Enter your name"/>
 
-            <label for="email">Email address</label>
+            <label htmlFor="email">Email address</label>
             <input type="email" id="email" name="email" placeholder="name@example.com"/>
 
-            <label for="password">Password</label>
+            <label htmlFor="password">Password</label>
             <input type="password" id="password" name="password" placeholder="Enter your password"/>
             
             <p>Already have an account? <a href="./login.html" className="text-color">Login</a></p>

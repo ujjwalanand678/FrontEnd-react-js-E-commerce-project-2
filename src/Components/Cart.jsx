@@ -9,17 +9,30 @@ import {
   decreaseQuantity,
 } from "../redux/cartSlice";
 const Cart = () => {
+  // useSelector is a hook that allows you to extract data from the Redux store state
+  // It takes a function as an argument that receives the entire state and returns the part of the state you want to access
+  // In this case, it retrieves the cart data from the Redux store
   const cartData = useSelector((state) => state.cart);
+  // useSelector is used to access the cart data from the Redux store
+  // It retrieves the current state of the cart from the Redux store
   const dispatch = useDispatch();
+  // Calculate total price and quantity
+  // Using reduce to sum up the total price and quantity of items in the cart
   const totalPrice = cartData.reduce(
-    (acc, item) => acc + item.price * item.quantity,
-    0
-  );
-  const totalQuantity = cartData.reduce((acc, item) => acc + item.quantity, 0);
+    (acc, item) => acc + item.price * item.quantity,0);
+  // Using reduce to sum up the total quantity of items in the cart
+  // This will give the total number of items, regardless of their individual quantities
+  const totalQuantity = cartData.reduce(
+    (acc, item) => acc + item.quantity, 0);
 
+  // Dispatching actions to the Redux store
+  // These functions will be used to handle the actions of removing an item from the cart,
   const handleRemoveFromCart = (id) => {
     dispatch(removeFromCart(id));
   };
+  // Decreasing and increasing the quantity of an item in the cart
+  // These functions will be used to handle the actions of decreasing and increasing the quantity of an item in the cart
+  // They will dispatch the corresponding actions to the Redux store
   const handleDecrement = (id) => {
     dispatch(decreaseQuantity(id));
   };
@@ -27,6 +40,9 @@ const Cart = () => {
     dispatch(increaseQuantity(id));
   };
   console.log(cartData);
+  // The Cart component renders the cart page
+  // It displays the list of items in the cart, their quantities, prices, and a summary of the order
+  // If the cart is empty, it shows a message indicating that the cart is empty
   return (
     <>
       <main>
@@ -62,7 +78,7 @@ const Cart = () => {
                         <div className="qty-row">
                           <button
                             className="qty-btn decrease"
-                            data-title="Mens Casual Premium Slim Fit T-Shirts "
+                            disabled={data.quantity === 1}
                             onClick={() => handleDecrement(data.id)}
                           >
                             −
@@ -71,7 +87,6 @@ const Cart = () => {
 
                           <button
                             className="qty-btn increase"
-                            data-title="Mens Casual Premium Slim Fit T-Shirts "
                             onClick={() => handleIncrement(data.id)}
                           >
                             +
@@ -79,7 +94,7 @@ const Cart = () => {
                         </div>
                         <p>
                           {data.quantity}×${Math.round(data.price)}=
-                          <b>${data.quantity * Math.round(data.price)}</b>
+                          <b>${Math.round(data.quantity * data.price)}</b>
                         </p>
                         <button
                           className="checkout-btn"
@@ -95,7 +110,7 @@ const Cart = () => {
             </div>
           </div>
 
-          {
+          
             <div className="cart-right">
               <div className="order-summary" id="orderSummary">
                 <h3 className="order-summary-1">Order Summary</h3>
@@ -119,7 +134,7 @@ const Cart = () => {
                 </div>
               </div>
             </div>
-          }
+          
         </div>
       </main>
       <Footer />

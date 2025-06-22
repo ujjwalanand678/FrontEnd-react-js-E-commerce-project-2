@@ -12,10 +12,10 @@ const Login = () => {
         <form action="" className="contact-us-1">
             
 
-            <label for="email">Email address</label>
+            <label htmlFor="email">Email address</label>
             <input type="email" id="email" name="email" placeholder="name@example.com"/>
 
-            <label for="password">Password</label>
+            <label htmlFor="password">Password</label>
             <input type="password" id="password" name="password" placeholder="Enter your password"/>
             
             <p>New Here? <a href="./register.html" className="text-color">Register</a></p>
