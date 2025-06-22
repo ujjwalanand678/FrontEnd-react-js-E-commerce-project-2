@@ -11,7 +11,7 @@ createRoot(document.getElementById("root")).render(
     <BrowserRouter basename="/FrontEnd-react-js-E-commerce-project-2">
       <Provider store={store}>
         <App />
-      </Provider>
+        </Provider>
     </BrowserRouter>
   </StrictMode>
 );
