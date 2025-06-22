@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./Products.css";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCartHome } from "../redux/cartSlice";
+
 const Products = () => {
   const [userData, setUserData] = useState([]);
+  const dispatch = useDispatch()
+
   const getData = async () => {
     const response = await fetch("https://fakestoreapi.com/products");
     const data = await response.json();
@@ -11,6 +16,9 @@ const Products = () => {
   useEffect(() => {
     getData();
   }, []);
+   const handleAddToCart= (user)=>{
+     dispatch(addToCartHome({ ...user, quantity: 1 }));
+    }
   return (
     <>
       <section className="latest-product-1">
@@ -42,7 +50,7 @@ const Products = () => {
                   <Link to={`product/${user.id}`}>
                     <button className="details">Details</button>
                   </Link>
-                  <button className="add-to-cart">Add to cart</button>
+                  <button className="add-to-cart" onClick={()=>handleAddToCart(user)}>Add to cart</button>
                 </div>
               </div>
             ))
