@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ujjwalanand678.github.io/",
+  "homepage": "https://ujjwalanand678.github.io/FrontEnd-react-js-E-commerce-project-2",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
